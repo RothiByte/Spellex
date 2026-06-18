@@ -8,7 +8,7 @@ Play Spellex here:
 
 https://rothibyte-spellex-streamlit-app-zajlhv.streamlit.app
 
-## ✨ Features
+## 🎉 Features
 * Intuitive design
 * Acseseable on the web anytime
    * (Depends on streamlit community cloud)
