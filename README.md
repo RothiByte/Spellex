@@ -1,19 +1,32 @@
-# 🎈 Blank app template
+# Spellex 🎯
 
-A simple Streamlit app template for you to modify!
+Spellex is a fun and interactive spelling game designed to help users improve their spelling skills through practice and repetition.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## 🚀 Try It Out
 
-### How to run it on your own machine
+Play Spellex here:
 
-1. Install the requirements
+https://rothibyte-spellex-streamlit-app-zajlhv.streamlit.app
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## 🎉 Features
+* Intuitive design
+* Acseseable on the web anytime
+   * (Depends on streamlit community cloud)
+* And more in the future!!! 
 
-2. Run the app
+## 🛠️ Future Development
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Planned features include:
+
+* User accounts
+* Progress saving
+* Level and XP system
+* Leaderboards
+* Wide range of words
+* Community Contributed Words with moderation
+* AI text to speach (API)
+
+## 📕 Version
+Current Version: **0.0.03**
+
+Made by RothiByte
