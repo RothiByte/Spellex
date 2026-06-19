@@ -12,6 +12,8 @@ https://rothibyte-spellex-streamlit-app-zajlhv.streamlit.app
 * Intuitive design
 * Acseseable on the web anytime
    * (Depends on streamlit community cloud)
+* Supabase integration!
+  * Word dictionary
 * And more in the future!!! 
 
 ## 🛠️ Future Development
@@ -27,6 +29,8 @@ Planned features include:
 * AI text to speach (API)
 
 ## 📕 Version
-Current Version: **0.0.03**
+Current Version: **0.0.04**
+
+Word count: 11
 
 Made by RothiByte
