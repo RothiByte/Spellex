@@ -1,18 +1,14 @@
 import streamlit as st
-import json
 import random
 import utility
 
-@st.cache_data(ttl=60)
-def sample_data():
-    return json.load(open("Sample_data.json","r"))
-
+#UI code
 def homepage():
     st.title(":blue[Spellex]! 🐝")
     st.text("Hello this is a mini project i am trying to make!!! This is meant to help improve spelling.")
     
     difficulty = st.selectbox(
-    "What is your preffered difficulty?",
+    "What is your preferred difficulty?",
     ("Super Easy", "Easy", "Medium","Hard","Very Hard","Extreme"),
     index = None,
     placeholder = "Select one...")
@@ -31,6 +27,7 @@ def question():
     difficulty = st.session_state.difficulty
     data = utility.get_ref_table(difficulty)
 
+    #Checks if the current rerun has a word selected
     if st.session_state.word_data == None:
         index = random.randint(0,data[1] - 1)
         word = data[0][index]
@@ -82,7 +79,7 @@ def error_page():
         st.session_state.screen = "homepage"
         st.rerun()
 
-#Will be acceible once I have done the moderation system
+#Will be accessible once I have done the moderation system
 def add_word(): 
     
     with st.form('add'):
@@ -94,7 +91,7 @@ def add_word():
         index = None,
         placeholder = "Select one...")
 
-        discrip = st.text_area("discription")
+        description = st.text_area("description")
 
         submit = st.form_submit_button('add')
 
@@ -102,13 +99,14 @@ def add_word():
         word_detail = {
         "word": word,
         "audio": "empty",
-        "sentence": discrip,
+        "sentence": description,
         "difficulty": difficulty
         }
 
         utility.add_data(word, difficulty, word_detail)
         st.balloons()
 
+#Main loop and initial session state declaration
 def main():
     if 'session' not in st.session_state:
         st.session_state["session"] = 'created'
@@ -128,4 +126,5 @@ def main():
     else:
         error_page()
 
+#Since Streamlit works by looping code every rerun there is no loops here
 main()
