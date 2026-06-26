@@ -39,7 +39,9 @@ def question():
 
     st.title(f"Spell the word!")
     st.text(word_data['sentence'])
-    st.audio(None) #word_data['audio']
+    with st.spinner("Loadin audio...",show_time=True):
+        st.audio(utility.get_word_sound(word_data))
+    st.caption("audio by ElevenLabs")
     
     ans, button = st.columns([3, 1])
     st.session_state.answer = ans.text_input("Spelling?").lower()
@@ -83,7 +85,7 @@ def error_page():
 def add_word(): 
     
     with st.form('add'):
-        word = st.text_input("Word")
+        word = st.text_input("Word").lower()
         
         difficulty = st.selectbox(
         "Difficulty",
@@ -98,7 +100,6 @@ def add_word():
     if submit:
         word_detail = {
         "word": word,
-        "audio": "empty",
         "sentence": description,
         "difficulty": difficulty
         }
@@ -114,6 +115,8 @@ def main():
         st.session_state['difficulty'] = None
         st.session_state['word_data'] = None
         st.session_state['answer'] = None
+        st.session_state['logged_in'] = False
+        st.session_state['user_data'] = None
 
     screen = st.session_state.screen
 

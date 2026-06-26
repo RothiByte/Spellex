@@ -10,10 +10,11 @@ https://rothibyte-spellex-streamlit-app-zajlhv.streamlit.app
 
 ## 🎉 Features
 * Intuitive design
-* Acseseable on the web anytime
+* Assessable on the web anytime
    * (Depends on streamlit community cloud)
 * Supabase integration!
   * Word dictionary
+* AI text to speech by ElevenLabs
 * And more in the future!!! 
 
 ## 🛠️ Future Development
@@ -26,10 +27,9 @@ Planned features include:
 * Leaderboards
 * Wide range of words
 * Community Contributed Words with moderation
-* AI text to speach (API)
 
 ## 📕 Version
-Current Version: **0.0.04**
+Current Version: **0.0.05**
 
 Word count: 11
 
