@@ -6,7 +6,7 @@ Spellex is a fun and interactive spelling game designed to help users improve th
 
 Play Spellex here:
 
-https://rothibyte-spellex-streamlit-app-zajlhv.streamlit.app
+https://spellex.streamlit.app
 
 ## 🎉 Features
 * Intuitive design
